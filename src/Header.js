@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, css } from 'aphrodite';
+import { StyleSheet, css } from 'aphrodite/no-important';
 
 const Header = () => {
   return(
@@ -20,12 +20,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: '100vw',
     height: 300,
-    marginBottom: 30,
+    marginBottom: 5,
     backgroundColor: '#000',
     backgroundImage: ' url("/img/nb/nb4_lg.jpg")',
     backgroundSize: 'cover',
     backgroundPosition: '50% center',
-    transitionDuration: '200ms',
+    transitionDuration: '350ms',
   },
   imgContainer: {
     position: 'absolute',
