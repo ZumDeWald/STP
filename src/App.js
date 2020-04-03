@@ -1,22 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
 
 import Header from './Header.js';
 import Section from './Section.js';
 
 function App() {
+
+  const [sectionOpen, setSectionOpen] = useState('none');
+
   return (
     <div className={css(styles.body)}>
-      <Header />
-      <Section title='Gallery' />
-      <Section title='Session Info' />
-      <Section title='About' />
+      <Header sectionOpen={sectionOpen} />
+      <Section title='Gallery' fromTop='320px' setSectionOpen={setSectionOpen} />
+      <Section title='Session Info' fromTop='385px' setSectionOpen={setSectionOpen} />
+      <Section title='About' fromTop='450px' setSectionOpen={setSectionOpen} />
     </div>
   );
 };
 
 const styles = StyleSheet.create({
   body: {
+    position: 'relative',
     display: 'flex',
     flexFlow: 'column nowrap',
     justifyContent: 'flex-start',
