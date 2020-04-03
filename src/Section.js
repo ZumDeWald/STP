@@ -6,7 +6,7 @@ const Section = ({ title, fromTop, setSectionOpen}) => {
   const [display, setDisplay] = useState('closed');
 
   const handleDisplayChange = () => {
-    display === 'closed' ? setDisplay('open') && setSectionOpen(title) : setDisplay('closed') && setSectionOpen('none');
+    display === 'closed' ? setDisplay('open') : setDisplay('closed');
     display === 'closed' ? setSectionOpen(title) :  setSectionOpen('none');
   };
 
